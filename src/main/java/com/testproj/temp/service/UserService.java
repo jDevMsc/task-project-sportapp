@@ -1,7 +1,7 @@
 package com.testproj.temp.service;
 
-import com.testproj.sportapp.model.User;
-import com.testproj.sportapp.util.exception.NotFoundException;
+import com.testproj.temp.model.User;
+import com.testproj.temp.util.exception.NotFoundException;
 import java.util.List;
 
 public interface UserService {

@@ -1,6 +1,6 @@
 package com.testproj.temp.repository;
 
-import com.testproj.sportapp.model.User;
+import com.testproj.temp.model.User;
 import java.util.List;
 
 public interface UserRepository {

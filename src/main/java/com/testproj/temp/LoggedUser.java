@@ -1,6 +1,6 @@
 package com.testproj.temp;
 
-import com.testproj.sportapp.model.Role;
+import com.testproj.temp.model.Role;
 import java.util.Set;
 
 public class LoggedUser {

@@ -1,12 +1,16 @@
 package com.testproj.temp.service;
 
-import com.testproj.sportapp.model.User;
-import com.testproj.sportapp.repository.UserRepository;
-import com.testproj.sportapp.util.exception.NotFoundException;
+import com.testproj.temp.model.User;
+import com.testproj.temp.repository.UserRepository;
+import com.testproj.temp.util.exception.NotFoundException;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service("userServiceImpl")
 public class UserServiceImpl implements UserService {
 
+    @Autowired
     private UserRepository repository;
 
     @Override
