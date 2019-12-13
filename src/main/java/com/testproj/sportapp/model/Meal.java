@@ -2,34 +2,39 @@ package com.testproj.sportapp.model;
 
 import java.time.LocalDateTime;
 
-public class MealTo {
+/**
+ * Meal for User
+ *
+ */
+public class Meal {
 
-    private final Integer id;
+    private Integer id;
 
     private final LocalDateTime dateTime;
 
     private final String description;
 
-    private final boolean excess;
-
     private final int calories;
 
-    public MealTo(LocalDateTime dateTime, String description, boolean excess, int calories) {
-        this(null, dateTime, description, excess, calories);
+    private  boolean excess;
+
+    public Meal(LocalDateTime dateTime, String description, int calories) {
+        this(null, dateTime, description , calories);
     }
 
-
-    public MealTo(Integer id, LocalDateTime dateTime, String description, boolean excess,
-        int calories) {
+    public Meal(Integer id, LocalDateTime dateTime, String description, int calories) {
         this.id = id;
         this.dateTime = dateTime;
         this.description = description;
-        this.excess = excess;
         this.calories = calories;
     }
 
-    public int getCalories() {
-        return calories;
+    public boolean isExcess() {
+        return excess;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public Integer getId() {
@@ -44,17 +49,23 @@ public class MealTo {
         return description;
     }
 
-    public boolean isExcess() {
-        return excess;
+    public int getCalories() {
+        return calories;
+    }
+
+
+
+    public boolean isNew() {
+        return id == null;
     }
 
     @Override
     public String toString() {
-        return "MealTo{" +
+        return "UserMeal{" +
             "id=" + id +
             ", dateTime=" + dateTime +
             ", description='" + description + '\'' +
-            ", excess=" + excess +
+            ", calories=" + calories +
             '}';
     }
 }

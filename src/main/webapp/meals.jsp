@@ -9,20 +9,23 @@
 </head>
 <body>
 <section>
-    <h3><a href="index.html">Home</a></h3>
+    <p><a href="index.html">Home</a></p>
     <p>К списку пользователей : <a href="users">пользователь</a></p>
     <hr/>
     <h2>Meals</h2>
+    <a href="meals?action=create">Добавить еду</a>
     <table>
         <thead>
         <tr>
             <th>Date</th>
             <th>Description</th>
             <th>Calories</th>
+            <th></th>
+            <th></th>
         </tr>
         </thead>
         <c:forEach items="${mealList}" var="meal">
-            <jsp:useBean id="meal" type="com.testproj.sportapp.model.UserMealWithExceed"/>
+            <jsp:useBean id="meal" type="com.testproj.sportapp.model.Meal"/>
             <tr class="${meal.excess ? 'excess' : 'normal'}">
                 <td>
                             <%--different date output options--%>
@@ -33,6 +36,8 @@
                 </td>
                 <td>${meal.description}</td>
                 <td>${meal.calories}</td>
+                <td><a href="meals?action=update&id=${meal.id}">Редактировать</a></td>
+                <td><a href="meals?action=delete&id=${meal.id}">Удалить</a></td>
             </tr>
         </c:forEach>
     </table>
