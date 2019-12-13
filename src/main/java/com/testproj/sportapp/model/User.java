@@ -1,5 +1,7 @@
-package com.testproj.temp.model;
+package com.testproj.sportapp.model;
 
+import com.testproj.sportapp.model.NamedEntity;
+import com.testproj.sportapp.model.Role;
 import java.util.Date;
 import java.util.EnumSet;
 import java.util.Set;

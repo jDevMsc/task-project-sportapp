@@ -1,4 +1,4 @@
-package com.testproj.sportapp.model;
+package com.testproj.sportapp.to;
 
 import java.time.LocalDateTime;
 /**

@@ -1,4 +1,4 @@
-package com.testproj.temp.model;
+package com.testproj.sportapp.model;
 
 public enum Role {
     ROLE_USER,

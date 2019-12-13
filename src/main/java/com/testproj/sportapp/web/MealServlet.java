@@ -3,8 +3,6 @@ package com.testproj.sportapp.web;
 import static org.slf4j.LoggerFactory.getLogger;
 
 import com.testproj.sportapp.model.Meal;
-import com.testproj.sportapp.repository.InMemoryUserMealRepository;
-import com.testproj.sportapp.repository.UserMealRepository;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.Objects;
@@ -23,7 +21,7 @@ public class MealServlet extends HttpServlet {
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
-        repository = new InMemoryUserMealRepository();
+        repository = new InMemoryUserMealRepositoryImpl();
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

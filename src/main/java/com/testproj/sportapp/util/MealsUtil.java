@@ -1,8 +1,7 @@
 package com.testproj.sportapp.util;
 
 import com.testproj.sportapp.model.Meal;
-import com.testproj.sportapp.model.MealTo;
-import com.testproj.sportapp.model.UserMealWithExceed;
+import com.testproj.sportapp.to.UserMealWithExceed;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -10,12 +9,9 @@ import java.time.LocalTime;
 import java.time.Month;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 /**
  * Create list for client

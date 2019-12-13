@@ -1,4 +1,4 @@
-package com.testproj.temp.service;
+package com.testproj.sportapp.service;
 
 import com.testproj.sportapp.repository.UserMealRepository;
 

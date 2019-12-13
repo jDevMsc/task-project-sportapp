@@ -1,4 +1,4 @@
-package com.testproj.temp.util.exception;
+package com.testproj.sportapp.util.exception;
 
 public class NotFoundException extends RuntimeException {
 

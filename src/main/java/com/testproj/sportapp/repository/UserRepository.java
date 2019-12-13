@@ -1,7 +1,7 @@
-package com.testproj.temp.repository;
+package com.testproj.sportapp.repository;
 
-import com.testproj.temp.model.User;
-import java.util.List;
+import com.testproj.sportapp.model.User;
+import java.util.Collection;
 
 public interface UserRepository {
 
@@ -13,6 +13,6 @@ public interface UserRepository {
 
     User getByEmail(String email);
 
-    List<User> getAll();
+    Collection<User> getAll();
 
 }

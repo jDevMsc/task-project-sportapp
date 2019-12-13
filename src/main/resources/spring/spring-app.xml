@@ -4,14 +4,14 @@
   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
 <!--  <bean class="com.testproj.temp.repository.mock.MockUserRepository" id="mockUserRepository"/>-->
-<!--  <bean class="com.testproj.temp.service.UserServiceImpl">-->
+<!--  <bean class="com.testproj.sportapp.service.UserServiceImpl">-->
 <!--      <property name="repository" ref="mockUserRepository"/>-->
 <!--  </bean>-->
 
   <context:annotation-config/>
 
-  <context:component-scan base-package="com.testproj.temp**.repository"/>
-  <context:component-scan base-package="com.testproj.temp**.service"/>
-  <context:component-scan base-package="com.testproj.temp**.web"/>
+  <context:component-scan base-package="com.testproj.sportapp**.repository"/>
+  <context:component-scan base-package="com.testproj.sportapp**.service"/>
+  <context:component-scan base-package="com.testproj.sportapp**.web"/>
 
 </beans>
