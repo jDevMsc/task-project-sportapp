@@ -1,0 +1,11 @@
+td, tr , th{
+  border:1px solid black;
+}
+
+.normal {
+  color: green;
+}
+
+.excess {
+  color: red;
+}
