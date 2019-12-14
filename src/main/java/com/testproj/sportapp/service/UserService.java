@@ -16,5 +16,5 @@ public interface UserService {
 
     List<User> getAll();
 
-    void update(User user);
+    void update(User user) throws NotFoundException;
 }

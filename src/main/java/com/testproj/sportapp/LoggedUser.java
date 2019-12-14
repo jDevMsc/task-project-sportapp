@@ -29,4 +29,8 @@ public class LoggedUser {
     public int getId() {
         return id;
     }
+
+    public static int getCaloriesPerDay() {
+        return 2000;
+    }
 }

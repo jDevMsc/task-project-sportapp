@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
  *
  */
 public class UserMealWithExceed {
-    protected Integer id;
+    protected final Integer id;
 
     protected final LocalDateTime dateTime;
 

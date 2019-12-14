@@ -3,21 +3,23 @@ package com.testproj.sportapp.model;
 import com.testproj.sportapp.model.BaseEntity;
 import java.time.LocalDateTime;
 
-public class UserMeal {
-    protected Integer id;
+public class UserMeal extends BaseEntity {
 
-    protected final LocalDateTime dateTime;
+    protected LocalDateTime dateTime;
 
-    protected final String description;
+    protected String description;
 
-    protected final int calories;
+    protected int calories;
+
+    public UserMeal() {
+    }
 
     public UserMeal(LocalDateTime dateTime, String description, int calories) {
         this(null, dateTime, description, calories);
     }
 
     public UserMeal(Integer id, LocalDateTime dateTime, String description, int calories) {
-        this.id = id;
+        super(id);
         this.dateTime = dateTime;
         this.description = description;
         this.calories = calories;
