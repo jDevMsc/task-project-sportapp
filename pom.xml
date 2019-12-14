@@ -26,6 +26,17 @@
 
 
   <dependencies>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>5.2.1.RELEASE</version>
+    </dependency>
+    <!--DataBase-->
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>9.4-1203-jdbc42</version>
+    </dependency>
     <!--Test-->
     <dependency>
       <groupId>junit</groupId>
