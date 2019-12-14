@@ -6,36 +6,30 @@ import java.time.LocalDateTime;
  *
  */
 public class UserMealWithExceed {
-    private Integer id;
+    protected Integer id;
 
-    private final LocalDateTime dateTime;
+    protected final LocalDateTime dateTime;
 
-    private final String description;
+    protected final String description;
 
-    private final int calories;
+    protected final int calories;
 
-    private final boolean excess;
+    protected final boolean exceed;
 
-    public UserMealWithExceed(LocalDateTime dateTime, String description, int calories,
-        boolean excess) {
-        this(null, dateTime, description, calories , excess);
+    public UserMealWithExceed(LocalDateTime dateTime, String description, int calories, boolean exceed) {
+        this(null, dateTime, description, calories, exceed);
     }
 
-    public UserMealWithExceed(Integer id, LocalDateTime dateTime, String description, int calories,
-        boolean excess) {
+    public UserMealWithExceed(Integer id, LocalDateTime dateTime, String description, int calories, boolean exceed) {
         this.id = id;
         this.dateTime = dateTime;
         this.description = description;
         this.calories = calories;
-        this.excess = excess;
+        this.exceed = exceed;
     }
 
     public Integer getId() {
         return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public LocalDateTime getDateTime() {
@@ -50,21 +44,18 @@ public class UserMealWithExceed {
         return calories;
     }
 
-    public boolean isExcess() {
-        return excess;
-    }
-
-    public boolean isNew() {
-        return id == null;
+    public boolean isExceed() {
+        return exceed;
     }
 
     @Override
     public String toString() {
-        return "UserMealWithExcess{" +
-                "dateTime=" + dateTime +
-                ", description='" + description + '\'' +
-                ", calories=" + calories +
-                ", excess=" + excess +
-                '}';
+        return "UserMealWithExceed{" +
+            "id=" + id +
+            ", dateTime=" + dateTime +
+            ", description='" + description + '\'' +
+            ", calories=" + calories +
+            ", exceed=" + exceed +
+            '}';
     }
 }

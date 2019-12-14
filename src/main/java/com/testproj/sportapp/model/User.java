@@ -8,25 +8,34 @@ import java.util.Set;
 
 public class User extends NamedEntity {
 
-    private String email;
+    private static final int DEFAULT_CALORIES_PER_DAY = 2000;
 
-    private String password;
+    protected String email;
 
-    private boolean enabled = true;
+    protected String password;
 
-    private Date registered = new Date();
+    protected boolean enabled = true;
 
-    private Set<Role> authorities;
+    protected Date registered = new Date();
+
+    protected Set<Role> roles;
+
+    protected int caloriesPerDay = DEFAULT_CALORIES_PER_DAY;
 
     public User() {
     }
 
-    public User(String name, String email, String password, Role role, Role... roles) {
-        super(name);
+    public User(Integer id, String name, String email, String password, Role role, Role... roles) {
+        this(id, name, email, password, DEFAULT_CALORIES_PER_DAY, true, EnumSet.of(role, roles));
+    }
+
+    public User(Integer id, String name, String email, String password, int caloriesPerDay, boolean enabled, Set<Role> roles) {
+        super(id, name);
         this.email = email;
         this.password = password;
-        this.enabled = true;
-        this.authorities = EnumSet.of(role, roles);
+        this.caloriesPerDay = caloriesPerDay;
+        this.enabled = enabled;
+        this.roles = roles;
     }
 
     public String getEmail() {
@@ -37,22 +46,51 @@ public class User extends NamedEntity {
         this.email = email;
     }
 
-    public boolean isEnabled() {
-        return enabled;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Date getRegistered() {
         return registered;
     }
 
+    public void setRegistered(Date registered) {
+        this.registered = registered;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public int getCaloriesPerDay() {
+        return caloriesPerDay;
+    }
+
+    public void setCaloriesPerDay(int caloriesPerDay) {
+        this.caloriesPerDay = caloriesPerDay;
+    }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
     @Override
     public String toString() {
-        return "User{" +
-            "email='" + email + '\'' +
-            ", password='" + password + '\'' +
+        return "User (" +
+            "id=" + id +
+            ", email=" + email +
+            ", name=" + name +
             ", enabled=" + enabled +
-            ", registered=" + registered +
-            ", name='" + name + '\'' +
-            '}';
+            ", roles=" + roles +
+            ", caloriesPerDay=" + caloriesPerDay +
+            ')';
     }
 }

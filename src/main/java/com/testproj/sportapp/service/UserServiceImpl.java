@@ -1,44 +1,39 @@
 package com.testproj.sportapp.service;
 
 import com.testproj.sportapp.model.User;
+import com.testproj.sportapp.repository.UserRepository;
+import com.testproj.sportapp.util.exception.ExceptionUtil;
 import com.testproj.sportapp.util.exception.NotFoundException;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service("userServiceImpl")
+@Service
 public class UserServiceImpl implements UserService {
 
-    @Autowired
     private UserRepository repository;
 
-    @Override
     public User save(User user) {
-        return null;
+        return repository.save(user);
     }
 
-    @Override
-    public void delete(int id) throws NotFoundException {
-
+    public void delete(int id) {
+        ExceptionUtil.check(repository.delete(id), id);
     }
 
-    @Override
-    public User Get(int id) throws NotFoundException {
-        return null;
+    public User get(int id) throws NotFoundException {
+        return ExceptionUtil.check(repository.get(id), id);
     }
 
-    @Override
     public User getByEmail(String email) throws NotFoundException {
-        return null;
+        return ExceptionUtil.check(repository.getByEmail(email), "email=" + email);
     }
 
-    @Override
     public List<User> getAll() {
-        return null;
+        return repository.getAll();
     }
 
-    @Override
-    public void update(User user) throws NotFoundException {
-
+    public void update(User user) {
+        repository.save(user);
     }
 }

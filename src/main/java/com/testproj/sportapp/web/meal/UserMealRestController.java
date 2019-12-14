@@ -11,12 +11,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+/**
+ *  for user control with meal
+ */
 @Controller
 public class UserMealRestController {
 
 private static final Logger LOG = LoggerFactory.getLogger(UserMealRestController.class);
 
-    @Autowired
     private UserMealServiceImpl service;
 
     public UserMeal get(int id) {
@@ -30,7 +32,7 @@ private static final Logger LOG = LoggerFactory.getLogger(UserMealRestController
         LOG.info("delete meal {} for User {}", id, userId);
         return  service.delete(id, userId);
     }
-
+        //meal for current user
     public List<UserMeal> getAll() {
         int userId = LoggedUser.id();
         LOG.info("getAll for User {}", userId);
