@@ -1,7 +1,8 @@
 package com.testproj.sportapp.repository.mock;
 
-import static ru.javawebinar.topjava.repository.mock.InMemoryUserRepositoryImpl.ADMIN_ID;
-import static ru.javawebinar.topjava.repository.mock.InMemoryUserRepositoryImpl.USER_ID;
+
+import static com.testproj.sportapp.UserTestData.ADMIN_ID;
+import static com.testproj.sportapp.UserTestData.USER_ID;
 
 import com.testproj.sportapp.model.UserMeal;
 import com.testproj.sportapp.repository.UserMealRepository;
@@ -27,7 +28,7 @@ public class InMemoryUserMealRepositoryImpl implements UserMealRepository {
     private AtomicInteger counter = new AtomicInteger(0);
 
     {
-        save(new UserMeal(LocalDateTime.of(2015, Month.MAY, 30, 10, 0), "Завтрак", 500), USER_ID);
+         save(new UserMeal(LocalDateTime.of(2015, Month.MAY, 30, 10, 0), "Завтрак", 500), USER_ID);
         save(new UserMeal(LocalDateTime.of(2015, Month.MAY, 30, 13, 0), "Обед", 1000), USER_ID);
         save(new UserMeal(LocalDateTime.of(2015, Month.MAY, 30, 20, 0), "Ужин", 500), USER_ID);
         save(new UserMeal(LocalDateTime.of(2015, Month.MAY, 31, 10, 0), "Завтрак", 1000), USER_ID);
