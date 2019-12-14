@@ -2,7 +2,6 @@ package com.testproj.sportapp.repository;
 
 import com.testproj.sportapp.model.User;
 import java.util.Collection;
-import java.util.List;
 
 public interface UserRepository {
     User save(User user);
@@ -16,5 +15,5 @@ public interface UserRepository {
     // null if not found
     User getByEmail(String email);
 
-    List<User> getAll();
+    Collection<User> getAll();
 }

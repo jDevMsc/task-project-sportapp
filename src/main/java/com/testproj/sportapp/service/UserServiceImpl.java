@@ -4,6 +4,7 @@ import com.testproj.sportapp.model.User;
 import com.testproj.sportapp.repository.UserRepository;
 import com.testproj.sportapp.util.exception.ExceptionUtil;
 import com.testproj.sportapp.util.exception.NotFoundException;
+import java.util.Collection;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,7 +34,7 @@ public class UserServiceImpl implements UserService {
         return ExceptionUtil.check(repository.getByEmail(email), "email=" + email);
     }
 
-    public List<User> getAll() {
+    public Collection<User> getAll() {
         return repository.getAll();
     }
 

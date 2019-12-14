@@ -3,6 +3,7 @@ package com.testproj.sportapp.web.user;
 import com.testproj.sportapp.LoggerWrapper;
 import com.testproj.sportapp.model.User;
 import com.testproj.sportapp.service.UserService;
+import java.util.Collection;
 import java.util.List;
 
 public abstract class AbstractUserController {
@@ -10,7 +11,7 @@ public abstract class AbstractUserController {
 
     private UserService service;
 
-    public List<User> getAll() {
+    public Collection<User> getAll() {
         LOG.info("getAll");
         return service.getAll();
     }

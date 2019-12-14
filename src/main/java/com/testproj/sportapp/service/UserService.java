@@ -2,6 +2,7 @@ package com.testproj.sportapp.service;
 
 import com.testproj.sportapp.model.User;
 import com.testproj.sportapp.util.exception.NotFoundException;
+import java.util.Collection;
 import java.util.List;
 
 public interface UserService {
@@ -14,7 +15,7 @@ public interface UserService {
 
     User getByEmail(String email) throws NotFoundException;
 
-    List<User> getAll();
+    Collection<User> getAll();
 
     void update(User user) throws NotFoundException;
 }

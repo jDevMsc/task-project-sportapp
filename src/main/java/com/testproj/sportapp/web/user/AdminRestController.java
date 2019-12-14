@@ -5,6 +5,7 @@ import static org.slf4j.LoggerFactory.getLogger;
 
 import com.testproj.sportapp.service.UserService;
 import com.testproj.sportapp.model.User;
+import java.util.Collection;
 import java.util.List;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -13,7 +14,7 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class AdminRestController extends AbstractUserController {
 
-    public List<User> getAll() {
+    public Collection<User> getAll() {
         return super.getAll();
     }
 
