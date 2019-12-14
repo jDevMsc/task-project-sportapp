@@ -1,8 +1,10 @@
-package com.testproj.sportapp.repository;
+package com.testproj.sportapp.repository.jdbc;
 
 import com.testproj.sportapp.model.User;
+import com.testproj.sportapp.repository.UserRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.support.DataAccessUtils;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -59,7 +61,8 @@ public class JdbcUserRepositoryImpl implements UserRepository {
 
     @Override
     public User get(int id) {
-        return jdbcTemplate.queryForObject("SELECT * FROM users WHERE id=?", ROW_MAPPER, id);
+        List<User> users = jdbcTemplate.query("SELECT * FROM users WHERE id=?", ROW_MAPPER, id);
+        return DataAccessUtils.singleResult(users);
     }
 
     @Override
