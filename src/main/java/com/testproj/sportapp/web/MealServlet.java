@@ -2,13 +2,9 @@ package com.testproj.sportapp.web;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
-import com.testproj.sportapp.LoggedUser;
 import com.testproj.sportapp.LoggerWrapper;
 import com.testproj.sportapp.model.UserMeal;
-import com.testproj.sportapp.repository.UserMealRepository;
-import com.testproj.sportapp.repository.mock.InMemoryUserMealRepositoryImpl;
 import com.testproj.sportapp.util.TimeUtil;
-import com.testproj.sportapp.util.UserMealsUtil;
 import com.testproj.sportapp.web.meal.UserMealRestController;
 import java.io.IOException;
 import java.time.LocalDate;

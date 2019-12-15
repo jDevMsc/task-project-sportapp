@@ -25,7 +25,7 @@
         </tr>
         </thead>
         <c:forEach items="${mealList}" var="meal">
-            <jsp:useBean id="meal" type="com.testproj.sportapp.model.Meal"/>
+            <jsp:useBean id="meal" scope="page" type="com.testproj.sportapp.to.UserMealWithExceed"/>
             <tr class="${meal.excess ? 'excess' : 'normal'}">
                 <td>
                             <%--different date output options--%>

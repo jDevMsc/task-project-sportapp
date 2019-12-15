@@ -3,16 +3,13 @@ package com.testproj.sportapp.web.meal;
 
 import com.testproj.sportapp.LoggerWrapper;
 import com.testproj.sportapp.service.UserMealService;
-import com.testproj.sportapp.service.UserMealServiceImpl;
 import com.testproj.sportapp.LoggedUser;
 import com.testproj.sportapp.model.UserMeal;
 import com.testproj.sportapp.to.UserMealWithExceed;
-import com.testproj.sportapp.util.UserMealsUtil;
+import com.testproj.sportapp.to.UserMealsUtil;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 

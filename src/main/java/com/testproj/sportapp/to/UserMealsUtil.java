@@ -1,8 +1,9 @@
-package com.testproj.sportapp.util;
+package com.testproj.sportapp.to;
 
 import com.testproj.sportapp.model.UserMeal;
 import com.testproj.sportapp.to.UserMealWithExceed;
 
+import com.testproj.sportapp.util.TimeUtil;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
